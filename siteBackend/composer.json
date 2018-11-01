@@ -1,0 +1,11 @@
+{
+    "name": "stenden/backend",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Sherin Bloemendaal",
+            "email": "sherin@blueberry.nl"
+        }
+    ],
+    "require": {}
+}
