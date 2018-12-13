@@ -1,31 +1,32 @@
 <template>
-    <div class='mainWrapper' @click='emitClickEvent'>
-      <p class='emotionIcon'>
-        <slot name='emojiCode'></slot>
-      </p>
-      <p class='emotionTitle'>
-        <slot name='title'></slot>
-      </p>
-    </div>
+  <div @click='emitClickEvent' class='mainWrapper'>
+    <p class='emotionIcon'>
+      <slot name='emojiCode'></slot>
+    </p>
+    <p class='emotionTitle'>
+      <slot name='title'></slot>
+    </p>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "emotionSelected",
-      methods: {
-        emitClickEvent() {
-          this.$emit("click");
-        }
+  export default {
+    name: "emotionSelected",
+    methods: {
+      emitClickEvent() {
+        this.$emit("click");
       }
     }
+  }
 </script>
 
 <style lang='scss' scoped>
   @import url('https://fonts.googleapis.com/css?family=Mali');
 
-  .emotionIcon{
+  .emotionIcon {
     font-size: 55px;
   }
+
   .emotionTitle {
     color: #f8f9fa;
     text-transform: uppercase;
@@ -33,8 +34,9 @@
     font-family: 'Mali', cursive;
     font-size: 25px;
   }
+
   .mainWrapper {
-    display:inline-grid;
+    display: inline-grid;
     text-align: center;
     width: 200px;
     background-color: rgba(248, 249, 250, 0.5);
@@ -46,6 +48,7 @@
     padding: 20px;
     cursor: pointer;
   }
+
   .mainWrapper:hover {
     background-color: skyblue;
   }
